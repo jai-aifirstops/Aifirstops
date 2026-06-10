@@ -1,0 +1,10 @@
+{
+  "name": "aifirstops-website",
+  "version": "1.0.0",
+  "description": "High-end multifunctional website for Aifirstops.",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 4173",
+    "lint": "node --check script.js"
+  }
+}
