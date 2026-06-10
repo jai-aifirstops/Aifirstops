@@ -41,6 +41,12 @@ type Solution = {
   outcomes: string[];
 };
 
+type Operation = {
+  title: string;
+  icon: LucideIcon;
+  description: string;
+};
+
 type PricingPlan = {
   name: string;
   price: number;
@@ -134,6 +140,39 @@ const portfolio = [
     title: 'Real-time ecommerce ops hub',
     category: 'Retail',
     result: '$4.1M recovered revenue',
+  },
+];
+
+const operations: Operation[] = [
+  {
+    title: 'AI chat concierge',
+    icon: Bot,
+    description: 'Answers questions, captures intent, and routes visitors to the next best action.',
+  },
+  {
+    title: 'Booking and lead flows',
+    icon: CalendarCheck,
+    description: 'Turns interest into qualified calls with smart forms and calendar-ready handoffs.',
+  },
+  {
+    title: 'Content and SEO system',
+    icon: Globe2,
+    description: 'Supports service pages, case studies, knowledge hubs, and conversion-focused content.',
+  },
+  {
+    title: 'Client portal concept',
+    icon: MessageSquare,
+    description: 'Creates a polished area for updates, documents, requests, and support conversations.',
+  },
+  {
+    title: 'Revenue analytics',
+    icon: CircleDollarSign,
+    description: 'Shows what is converting, where time is saved, and which workflows need attention.',
+  },
+  {
+    title: 'Automation library',
+    icon: Workflow,
+    description: 'Documents repeatable automations your team can launch, monitor, and improve.',
   },
 ];
 
@@ -523,15 +562,8 @@ function App() {
             <h2>Everything needed to feel premium, useful, and alive.</h2>
           </div>
           <div className="operations-grid">
-            {[
-              ['AI chat concierge', Bot, 'Answers questions, captures intent, and routes visitors to the next best action.'],
-              ['Booking and lead flows', CalendarCheck, 'Turns interest into qualified calls with smart forms and calendar-ready handoffs.'],
-              ['Content and SEO system', Globe2, 'Supports service pages, case studies, knowledge hubs, and conversion-focused content.'],
-              ['Client portal concept', MessageSquare, 'Creates a polished area for updates, documents, requests, and support conversations.'],
-              ['Revenue analytics', CircleDollarSign, 'Shows what is converting, where time is saved, and which workflows need attention.'],
-              ['Automation library', Workflow, 'Documents repeatable automations your team can launch, monitor, and improve.'],
-            ].map(([title, Icon, description]) => (
-              <article key={title as string} className="operation-card">
+            {operations.map(({ title, icon: Icon, description }) => (
+              <article key={title} className="operation-card">
                 <Icon size={22} />
                 <h3>{title}</h3>
                 <p>{description}</p>
