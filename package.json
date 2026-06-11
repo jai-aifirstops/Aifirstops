@@ -1,0 +1,52 @@
+{
+  "name": "modern-marketplace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "DATABASE_URL=\"file:./dev.db\" NEXTAUTH_SECRET=\"dev-local-secret\" NEXTAUTH_URL=\"http://localhost:3000\" next dev",
+    "build": "DATABASE_URL=\"file:./dev.db\" NEXTAUTH_SECRET=\"dev-local-secret\" NEXTAUTH_URL=\"http://localhost:3000\" next build",
+    "start": "DATABASE_URL=\"file:./dev.db\" NEXTAUTH_SECRET=\"dev-local-secret\" NEXTAUTH_URL=\"http://localhost:3000\" next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "db:up": "node -e \"console.log('SQLite mode: no DB container/service required.')\"",
+    "db:generate": "DATABASE_URL=\"file:./dev.db\" prisma generate --schema prisma/schema.sqlite.prisma",
+    "db:push": "DATABASE_URL=\"file:./dev.db\" prisma db push --schema prisma/schema.sqlite.prisma",
+    "db:seed": "DATABASE_URL=\"file:./dev.db\" tsx prisma/seed.ts",
+    "full:start": "npm run db:up && npm run db:generate && npm run db:push && npm run db:seed && npm run dev",
+    "db:generate:postgres": "prisma generate --schema prisma/schema.prisma",
+    "db:push:postgres": "prisma db push --schema prisma/schema.prisma",
+    "db:migrate:postgres": "prisma migrate dev --schema prisma/schema.prisma",
+    "db:seed:postgres": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "@stripe/stripe-js": "^9.8.0",
+    "bcryptjs": "^3.0.3",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.4.0",
+    "lucide-react": "^1.17.0",
+    "next": "^15.5.6",
+    "next-auth": "^4.24.14",
+    "prisma": "^6.19.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^3.8.1",
+    "stripe": "^22.2.0",
+    "tailwind-merge": "^3.6.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^9",
+    "eslint-config-next": "^15.5.6",
+    "tailwindcss": "^4",
+    "tsx": "^4.22.4",
+    "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}
