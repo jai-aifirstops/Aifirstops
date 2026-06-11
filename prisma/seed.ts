@@ -292,7 +292,6 @@ async function main() {
           isApproved: true,
         },
       ],
-      skipDuplicates: true,
     });
 
     await prisma.refundRequest.create({

@@ -10,6 +10,7 @@ const credentialsSchema = z.object({
 });
 
 export const authOptions: NextAuthOptions = {
+  secret: process.env.NEXTAUTH_SECRET ?? "dev-local-secret",
   session: {
     strategy: "jwt",
   },

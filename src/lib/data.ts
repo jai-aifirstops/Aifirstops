@@ -31,9 +31,9 @@ export async function getProducts(filters: ProductFilters = {}) {
     ...(filters.query
       ? {
           OR: [
-            { title: { contains: filters.query, mode: "insensitive" } },
-            { description: { contains: filters.query, mode: "insensitive" } },
-            { brand: { contains: filters.query, mode: "insensitive" } },
+            { title: { contains: filters.query } },
+            { description: { contains: filters.query } },
+            { brand: { contains: filters.query } },
           ],
         }
       : {}),
@@ -46,7 +46,7 @@ export async function getProducts(filters: ProductFilters = {}) {
       : {}),
     ...(filters.brand
       ? {
-          brand: { contains: filters.brand, mode: "insensitive" },
+          brand: { contains: filters.brand },
         }
       : {}),
     ...(filters.minPrice || filters.maxPrice
@@ -263,17 +263,33 @@ export async function getAdminDashboardData() {
 }
 
 export async function getSalesChartData() {
-  const rows = await prisma.$queryRaw<Array<{ day: string; total: number }>>`
-    SELECT TO_CHAR(DATE_TRUNC('day', "createdAt"), 'YYYY-MM-DD') as day,
-           COALESCE(SUM(CAST("total" AS NUMERIC)), 0) as total
-    FROM "Order"
-    WHERE "paymentStatus" = 'PAID'
-      AND "createdAt" >= NOW() - INTERVAL '30 day'
-    GROUP BY 1
-    ORDER BY 1 ASC
-  `;
+  const from = new Date();
+  from.setDate(from.getDate() - 30);
 
-  return rows;
+  const orders = await prisma.order.findMany({
+    where: {
+      paymentStatus: "PAID",
+      createdAt: {
+        gte: from,
+      },
+    },
+    select: {
+      createdAt: true,
+      total: true,
+    },
+    orderBy: {
+      createdAt: "asc",
+    },
+  });
+
+  const buckets = new Map<string, number>();
+
+  for (const order of orders) {
+    const key = order.createdAt.toISOString().slice(0, 10);
+    buckets.set(key, (buckets.get(key) ?? 0) + Number(order.total));
+  }
+
+  return Array.from(buckets.entries()).map(([day, total]) => ({ day, total }));
 }
 
 export async function getAdminUsers() {

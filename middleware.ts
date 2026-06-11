@@ -4,7 +4,7 @@ import { getToken } from "next-auth/jwt";
 const authRoutes = ["/cart", "/checkout", "/orders", "/profile", "/wishlist"];
 
 export async function middleware(request: NextRequest) {
-  const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET });
+  const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET ?? "dev-local-secret" });
   const path = request.nextUrl.pathname;
 
   const requiresAuth = authRoutes.some((route) => path.startsWith(route));
