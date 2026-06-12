@@ -40,6 +40,29 @@ App URL: [http://localhost:3000](http://localhost:3000)
 
 ---
 
+## One-Command Smoke Test
+
+Run a full end-to-end validation in one command:
+
+```bash
+npm run smoke:test
+```
+
+`smoke:test` automatically validates:
+
+- DB bootstrap/generate/push/seed
+- Typecheck, lint, build
+- Server startup and route accessibility
+- Customer/admin auth flows and RBAC
+- Seeded product and order presence
+- Cart/wishlist/order pages
+- Admin pages
+- Upload and support APIs
+
+The smoke test uses an automatically selected free localhost port, so it won't conflict with an already-running dev server.
+
+---
+
 ## Seeded Local Login Credentials
 
 - **Admin**: `admin@marketplace.local` / `Admin123!`
@@ -65,6 +88,7 @@ App URL: [http://localhost:3000](http://localhost:3000)
 - `npm run typecheck`
 - `npm run lint`
 - `npm run build`
+- `npm run smoke:test`
 
 ### Production PostgreSQL helpers
 
