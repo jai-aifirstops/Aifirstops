@@ -8,6 +8,7 @@
     "start": "DATABASE_URL=\"file:./dev.db\" NEXTAUTH_SECRET=\"dev-local-secret\" NEXTAUTH_URL=\"http://localhost:3000\" next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "vercel-build": "prisma generate --schema prisma/schema.prisma && next build",
     "db:up": "node -e \"console.log('SQLite mode: no DB container/service required.')\"",
     "db:generate": "DATABASE_URL=\"file:./dev.db\" prisma generate --schema prisma/schema.sqlite.prisma",
     "db:push": "DATABASE_URL=\"file:./dev.db\" prisma db push --schema prisma/schema.sqlite.prisma",

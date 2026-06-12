@@ -116,20 +116,57 @@ For production, set:
 
 ## Deployment (Vercel + Supabase/Neon)
 
-1. Create a PostgreSQL database (Supabase/Neon).
-2. Set Vercel env vars (especially `DATABASE_URL`, `NEXTAUTH_SECRET`, `NEXTAUTH_URL`).
-3. Run Prisma with PostgreSQL schema:
+Local SQLite support is unchanged; production uses PostgreSQL via `prisma/schema.prisma`.
+
+### 1. Create a PostgreSQL database
+
+Use Supabase, Neon, Vercel Postgres, or any PostgreSQL provider and copy its connection string.
+
+### 2. Set Vercel environment variables
+
+Set these in **Vercel → Project → Settings → Environment Variables** (Production, and Preview if used):
+
+| Variable | Required | Value / Notes |
+| --- | --- | --- |
+| `DATABASE_URL` | **Yes** | Your PostgreSQL connection string. `prisma/schema.prisma` reads `env("DATABASE_URL")`. Do **not** use `POSTGRES_DATABASE_URL` — it is not read by the app. |
+| `NEXTAUTH_SECRET` | **Yes** | Strong random secret, e.g. `openssl rand -base64 32`. (Code falls back to `dev-local-secret` only for local dev.) |
+| `NEXTAUTH_URL` | **Yes** | Your deployed URL, e.g. `https://your-app.vercel.app`. Used by NextAuth and for Stripe success/cancel redirects. |
+| `STRIPE_SECRET_KEY` | For checkout | Stripe secret key (`sk_test_...` / `sk_live_...`). Without it the app boots but checkout fails. |
+| `STRIPE_WEBHOOK_SECRET` | For payment confirmation | From the Stripe webhook endpoint (`whsec_...`). Required for the webhook to mark orders paid, clear carts, and decrement inventory. |
+| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Optional | Client publishable key (`pk_...`). Not currently referenced in code (checkout uses Stripe-hosted redirect), but safe to set. |
+| `UPLOAD_DIR` | Optional | Defaults to `public/uploads`. See serverless caveat below. |
+
+### 3. Build command
+
+Vercel automatically runs the `vercel-build` script, so no extra configuration is needed. The exact command it runs is:
 
 ```bash
-npm run db:generate:postgres
-npm run db:push:postgres
-npm run db:seed:postgres
+prisma generate --schema prisma/schema.prisma && next build
 ```
 
-4. Deploy to Vercel.
-5. Configure Stripe webhook endpoint:
-   - `https://<your-domain>/api/stripe/webhook`
+If you prefer to set it manually in **Settings → Build & Output Settings → Build Command**, use the same string above. (The default `build`/`dev`/`start` scripts intentionally hardcode the local SQLite `DATABASE_URL` and must **not** be used for production.)
+
+### 4. Initialize the production database (one time)
+
+Run locally against the production `DATABASE_URL` (or from a one-off job):
+
+```bash
+DATABASE_URL="<your-postgres-url>" npm run db:push:postgres
+DATABASE_URL="<your-postgres-url>" npm run db:seed:postgres   # optional: seeds demo data; destructive (wipes all tables first)
+```
+
+### 5. Deploy and configure Stripe webhook
+
+1. Deploy to Vercel.
+2. In Stripe, add a webhook endpoint:
+   - URL: `https://<your-domain>/api/stripe/webhook`
    - Event: `checkout.session.completed`
+   - Copy the signing secret into `STRIPE_WEBHOOK_SECRET`.
+
+### Serverless caveats
+
+- **Image uploads:** `/api/upload` writes to the local filesystem (`public/uploads`), which is **ephemeral and read-only** on Vercel serverless functions. Uploaded files will not persist. For production, switch to external object storage (e.g. Cloudinary/S3). `res.cloudinary.com` and `images.unsplash.com` are already allowed in `next.config.ts`.
+- **Prisma engine target:** Generation runs on Vercel during build, so the default target normally matches the runtime. If you hit a Prisma engine error at runtime, add `binaryTargets` to the `generator client` block in `prisma/schema.prisma`.
 
 ---
 
