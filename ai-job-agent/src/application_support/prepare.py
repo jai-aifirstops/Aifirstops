@@ -49,7 +49,15 @@ def prepare_application(
     outreach = draft_outreach_bundle(job, profile)
 
     resume_info: dict[str, Any] | None = None
-    if report.match_score >= min_score_for_resume and not report.rejected:
+    if not profile.is_ready_for_tailoring:
+        resume_info = {
+            "skipped": True,
+            "reason": (
+                "Candidate profile has not been reviewed and approved. "
+                "Run import-resume, review-profile, and validate-profile first."
+            ),
+        }
+    elif report.match_score >= min_score_for_resume and not report.rejected:
         if not dry_run:
             resume_info = ResumeTailor(profile).tailor(job, report)
         else:

@@ -7,7 +7,7 @@ from src.models.candidate import CandidateProfile, EducationRecord, SkillRecord
 
 def _profile_with_skills() -> CandidateProfile:
     return CandidateProfile(
-        full_name="Jai deep Ponnam",
+        full_name="Jaideep Ponnam",
         preferred_name="Jai",
         location_city="Austin",
         location_state="Texas",

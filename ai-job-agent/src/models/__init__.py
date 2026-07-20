@@ -3,10 +3,12 @@
 from src.models.candidate import (
     Achievement,
     CandidateProfile,
+    CertificationRecord,
     ClaimType,
     Confidence,
     ProjectRecord,
     SkillRecord,
+    VerificationStatus,
     VerifiedExperience,
 )
 from src.models.job import JobPosting, WorkArrangement
@@ -18,6 +20,7 @@ __all__ = [
     "ApprovalAction",
     "ApprovalStatus",
     "CandidateProfile",
+    "CertificationRecord",
     "ClaimType",
     "Confidence",
     "JobPosting",
@@ -27,6 +30,7 @@ __all__ = [
     "RequirementMatch",
     "SafetyLevel",
     "SkillRecord",
+    "VerificationStatus",
     "VerifiedExperience",
     "WorkArrangement",
 ]

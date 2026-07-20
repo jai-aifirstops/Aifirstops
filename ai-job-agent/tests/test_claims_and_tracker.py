@@ -5,18 +5,22 @@ from pathlib import Path
 import pytest
 
 from src.common.resume_import import import_resume
-from src.models.candidate import ClaimType
-from src.resume_tailoring.tailor import ResumeTailor
 from src.job_parser.parser import parse_job_dict
 from src.matching.scorer import MatchScorer
-from src.models.candidate import CandidateProfile, EducationRecord, SkillRecord, VerifiedExperience, ClaimItem
+from src.models.candidate import (
+    CandidateProfile,
+    ClaimItem,
+    ClaimType,
+    EducationRecord,
+    SkillRecord,
+    VerifiedExperience,
+)
+from src.resume_tailoring.tailor import ResumeTailor
 from src.tracking.tracker import ApplicationTracker
 
 
-def test_import_resume_extracts_verified_skills(tmp_path: Path):
+def test_import_resume_extracts_verified_skills():
     fixture = Path(__file__).parent / "fixtures" / "sample_resume.md"
-    # Import into temp copies by monkeypatching destinations would be heavy;
-    # instead parse via import_resume dry-run and a local copy write path through dry_run.
     result = import_resume(fixture, dry_run=True)
     assert result["skills_found"] >= 5
     assert result["experiences_found"] >= 1
@@ -25,26 +29,38 @@ def test_import_resume_extracts_verified_skills(tmp_path: Path):
 
 def test_tailor_refuses_below_75():
     profile = CandidateProfile(
-        full_name="Jai deep Ponnam",
+        full_name="Jaideep Ponnam",
         education=[EducationRecord(degree="MS CS", institution="University of Memphis")],
         resume_imported=True,
+        profile_reviewed=True,
+        profile_approved=True,
         skills=[SkillRecord(name="Python")],
+        experiences=[
+            VerifiedExperience(
+                id="exp_001",
+                employer="Fixture Labs",
+                role="Intern",
+                responsibilities=[ClaimItem(text="Built Python APIs")],
+            )
+        ],
     )
     job = parse_job_dict({"title": "AI Engineer", "company": "Acme", "description": "Python LLM"})
     report = MatchScorer(profile).score(job)
     report.match_score = 70
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError, match="75"):
         ResumeTailor(profile, output_dir=Path("/tmp/resume_test_out")).tailor(job, report)
 
 
 def test_unsupported_claims_not_in_resume(tmp_path: Path):
     profile = CandidateProfile(
-        full_name="Jai deep Ponnam",
+        full_name="Jaideep Ponnam",
         preferred_name="Jai",
         location_city="Austin",
         location_state="Texas",
         education=[EducationRecord(degree="MS CS", institution="University of Memphis")],
         resume_imported=True,
+        profile_reviewed=True,
+        profile_approved=True,
         skills=[SkillRecord(name="Python", claim_type=ClaimType.VERIFIED_FACT)],
         experiences=[
             VerifiedExperience(
@@ -95,5 +111,7 @@ def test_tracker_refuses_applied_without_confirmation(tmp_path: Path):
     )
     with pytest.raises(PermissionError):
         tracker.update_status("abc", "Applied")
-    row = tracker.update_status("abc", "Applied", user_confirmed_submission=True, date_applied="2026-07-20")
+    row = tracker.update_status(
+        "abc", "Applied", user_confirmed_submission=True, date_applied="2026-07-20"
+    )
     assert row["application_status"] == "Applied"

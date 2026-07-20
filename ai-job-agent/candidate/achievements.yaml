@@ -1,16 +1,229 @@
-schema_version: "1.0"
-resume_imported: false
-achievements: []
-# - id: ach_001
-#   text: "..."
-#   metric: null
-#   related_experience_id: null
-#   related_project_id: null
-#   source_file: "..."
-#   supporting_text: "..."
-#   confidence: high
-#   can_include_in_resume: true
-#   claim_type: verified_fact
-
+schema_version: '1.1'
+resume_imported: true
+achievements:
+- id: ach_001
+  text: Developed backend services using Java and Spring Boot to support scalable
+    microservice-based applications used across enterprise platforms.
+  metric: null
+  related_experience_id: exp_001
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Developed backend services using Java and Spring Boot to support
+    scalable microservice-based applications used across enterprise platforms.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_002
+  text: Designed and implemented scalable RESTful APIs within distributed microservice
+    environments for enterprise platform communication.
+  metric: null
+  related_experience_id: exp_001
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Designed and implemented scalable RESTful APIs within distributed
+    microservice environments for enterprise platform communication.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_003
+  text: Integrated backend services with PostgreSQL databases and improved query performance
+    through optimized data models.
+  metric: null
+  related_experience_id: exp_001
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Integrated backend services with PostgreSQL databases and improved
+    query performance through optimized data models.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_004
+  text: Built and maintained CI/CD pipelines using Docker and Azure DevOps to automate
+    application testing and deployments.
+  metric: null
+  related_experience_id: exp_001
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Built and maintained CI/CD pipelines using Docker and Azure DevOps
+    to automate application testing and deployments.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_005
+  text: Developed backend components and internal tools using Java and Spring Boot
+    to support research projects and academic data workflows.
+  metric: null
+  related_experience_id: exp_002
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Developed backend components and internal tools using Java and
+    Spring Boot to support research projects and academic data workflows.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_006
+  text: Implemented unit tests using JUnit and Jasmine to validate application functionality
+    and improve code reliability.
+  metric: null
+  related_experience_id: exp_002
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Implemented unit tests using JUnit and Jasmine to validate application
+    functionality and improve code reliability.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_007
+  text: Developed and maintained scalable backend services using Java and Spring Boot
+    within microservice-based enterprise applications.
+  metric: null
+  related_experience_id: exp_003
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Developed and maintained scalable backend services using Java and
+    Spring Boot within microservice-based enterprise applications.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_008
+  text: Developed and used RESTful APIs supported by JSON and HTTP protocols for backend
+    and internal web platform integration.
+  metric: null
+  related_experience_id: exp_003
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Developed and used RESTful APIs supported by JSON and HTTP protocols
+    for backend and internal web platform integration.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_009
+  text: Constructed and improved SQL queries and schemas of the relational database,
+    for improved data retrieval and sustained high-volume transactions.
+  metric: null
+  related_experience_id: exp_003
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Constructed and improved SQL queries and schemas of the relational
+    database, for improved data retrieval and sustained high-volume transactions.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_010
+  text: Tested and resolved issues within production and staging environments for
+    improved systems and reduced application downtime.
+  metric: null
+  related_experience_id: exp_003
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Tested and resolved issues within production and staging environments
+    for improved systems and reduced application downtime.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_011
+  text: Created unit and integration tests with JUnit, resulting in higher code reliability
+    and reduced defects in development cycles.
+  metric: null
+  related_experience_id: exp_003
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Created unit and integration tests with JUnit, resulting in higher
+    code reliability and reduced defects in development cycles.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_012
+  text: Partnered with the DevOps team in support of CI/CD integration for automated
+    builds and deployments through Git, Jenkins, and containerized environments.
+  metric: null
+  related_experience_id: exp_003
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Partnered with the DevOps team in support of CI/CD integration
+    for automated builds and deployments through Git, Jenkins, and containerized environments.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_013
+  text: Built and tested RESTful APIs based on the JSON and HTTP standard for the
+    research applications.
+  metric: null
+  related_experience_id: exp_004
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Built and tested RESTful APIs based on the JSON and HTTP standard
+    for the research applications.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+- id: ach_014
+  text: Designed and optimized the SQL queries for the experimental datasets to facilitate
+    backend data retrieval and to enhance the data processing performance.
+  metric: null
+  related_experience_id: exp_004
+  related_project_id: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Designed and optimized the SQL queries for the experimental datasets
+    to facilitate backend data retrieval and to enhance the data processing performance.
+  confidence: medium
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
 notes:
-  - "Empty until resume import. Metrics must be source-backed."
+- Metrics require confirmation before emphasis in applications.

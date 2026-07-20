@@ -111,7 +111,7 @@ def generate_daily_report(
         [
             "## Today’s Action Plan",
             "",
-            "1. Import or confirm master resume (`python -m src.cli import-resume <path>`).",
+            "1. Complete onboarding if needed: `import-resume --auto` → `review-profile` → `validate-profile`.",
             "2. Review Top Opportunities and reject any that are not a fit.",
             "3. For each Awaiting Approval application, confirm resume version and answers.",
             "4. Manually submit only after approving Level-2 items; never ask the agent to auto-submit.",

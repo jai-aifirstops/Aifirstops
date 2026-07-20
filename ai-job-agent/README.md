@@ -1,90 +1,122 @@
 # AI Job Application Automation Agent
 
-Local-first Python agent that helps **Jai deep Ponnam** discover, score, prepare, and track AI engineering job applications — with strict truthfulness and human approval gates.
+Local-first Python agent that helps **Jaideep Ponnam** discover, score, prepare, and track AI engineering job applications — with strict truthfulness rules and human approval gates.
 
-> This project lives under `ai-job-agent/` inside the workspace. It does **not** modify the Nova Market Next.js app.
+> Lives under `ai-job-agent/`. It does **not** modify the Nova Market Next.js app.
 
-## What works in v0.1
-
-- Project architecture + config schemas
-- Candidate knowledge base (verified-only; empty experience until resume import)
-- Job parser + normalization
-- Deduplication (company/title/URL/description similarity)
-- Match scoring (0–100) with hard rejects for citizenship/clearance/staff+ roles
-- Application tracker CSV with safe status transitions
-- Resume tailoring workflow (score ≥ 75) + claims/keyword/gap reports
-- Application answer drafts with `REQUIRES USER CONFIRMATION` for legal fields
-- Outreach drafts (never sent)
-- Approval queue (Level 2 / Level 3)
-- Daily + weekly report generators
-- CLI (`python -m src.cli ...`)
-- Unit tests for parsing, dedupe, scoring, claims, tracker
-
-## What is intentionally not automated yet
-
-- Live Adzuna / SerpAPI connectors (hooks + config present; disabled by default)
-- PDF resume parsing (convert to Markdown/text first)
-- Browser form filling / CAPTCHA / LinkedIn messaging
-- Automatic application submission (never)
-
-## Quick start
+## Setup
 
 ```bash
 cd ai-job-agent
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
 
-# Validate profile + create tracker
-python -m src.cli initialize-profile
+Optional API keys (live discovery later): copy `.env.example` → `.env`.
 
-# REQUIRED before real applications: import your resume (Markdown/text)
-python -m src.cli import-resume /path/to/your_resume.md
+## Candidate onboarding (required first)
 
-# Offline demo using fixture jobs
-python -m src.cli discover-jobs
-python -m src.cli analyze-jobs
+### 1) Place your resume
+
+Put one resume file in:
+
+```text
+ai-job-agent/resumes/master/
+```
+
+Supported formats:
+
+- PDF (`.pdf`)
+- Word (`.docx`)
+- Markdown (`.md` / `.markdown`)
+- Plain text (`.txt` / `.text`)
+
+### 2) Import
+
+Auto-detect when exactly one resume exists:
+
+```bash
+python -m src.cli import-resume --auto
+```
+
+Or pass an explicit path:
+
+```bash
+python -m src.cli import-resume "resumes/master/JXTG RES.pdf"
+python -m src.cli import-resume --dry-run --auto
+```
+
+Import extracts contact, education, experience, projects/leadership, skills, certifications, and measurable accomplishments. Every fact stores:
+
+- source filename
+- source section
+- original supporting text
+- confidence
+- verification status
+
+Uncertain fields are marked `requires_user_confirmation` (never invented).
+
+### 3) Review facts
+
+Interactive:
+
+```bash
+python -m src.cli review-profile
+```
+
+Actions per fact: approve / correct / reject / private / toggle resume-use / record missing info.
+
+Scriptable helpers:
+
+```bash
+python -m src.cli review-profile --list-only
+python -m src.cli review-profile --approve-all-pending --mark-approved
+python -m src.cli review-profile --add-skill "LangChain"
+```
+
+### 4) Validate readiness
+
+```bash
+python -m src.cli validate-profile
+```
+
+Reports missing required fields, conflicting dates, duplicate skills, unsupported claims, unverified metrics, empty experience descriptions, and a readiness percentage.
+
+### 5) Daily run
+
+```bash
 python -m src.cli daily-run --dry-run
 ```
 
-## Important: resume status
+`daily-run` will **not** generate tailored resumes until:
 
-At initialization, **no real resume was found in the workspace**. Only these facts were loaded:
+- resume imported
+- profile reviewed
+- profile approved
+- at least one experience exists
 
-- Name, preferred name, Austin TX location
-- M.S. Computer Science, University of Memphis
-- STEM OPT (reported)
-- Target AI engineering roles / preferences
+## Other commands
 
-Employment history, projects, skills, and metrics are **empty** until you import a resume. The synthetic file under `tests/fixtures/sample_resume.md` is **test-only** and must not be used as your real resume.
+```bash
+python -m src.cli initialize-profile
+python -m src.cli discover-jobs
+python -m src.cli analyze-jobs
+python -m src.cli prepare-application --job-id JOB_ID
+python -m src.cli show-approval-queue
+python -m src.cli approve --action-id ACTION_ID
+python -m src.cli mark-applied --job-id JOB_ID --confirm
+python -m src.cli prepare-interview --job-id JOB_ID
+python -m src.cli weekly-review
+```
 
-## Daily workflow output
+## Safety model
 
-`daily-run` prints:
-
-1. Daily Job Search Summary  
-2. Top Opportunities  
-3. Approval Queue  
-4. Today’s Action Plan  
-
-Reports are also written to `reports/daily/YYYY-MM-DD.md`.
-
-## Approval model
-
-- Drafting resumes/messages/reports → automatic  
-- Using a resume, answering sponsorship/salary, sending outreach → **your approval**  
-- Submitting applications / sending emails → **you do it**; then run `mark-applied --confirm`
-
-## Configuration
-
-| File | Purpose |
-|------|---------|
-| `config/candidate_profile.yaml` | Identity, education, auth notes, targets |
-| `config/job_preferences.yaml` | Filters and thresholds |
-| `config/scoring_rules.yaml` | Weights, penalties, keywords |
-| `config/search_sources.yaml` | Discovery sources |
-
-Optional API keys: copy `.env.example` → `.env`.
+| Level | Examples | Behavior |
+|------|----------|----------|
+| 1 | parse, score, draft, report | Automatic |
+| 2 | finalize resume use, outreach send intent, salary/sponsorship answers | Approval required |
+| 3 | submit application, send email/LinkedIn, accept offer | Never automatic |
 
 ## Tests
 
@@ -93,16 +125,18 @@ cd ai-job-agent
 pytest -q
 ```
 
-## Suggested next inputs from you
+## Configuration
 
-1. Master resume as `.md` or `.txt` (PDF support later)  
-2. Confirm email/phone and graduation date  
-3. Confirm how you want sponsorship / STEM OPT questions answered  
-4. Salary expectation range (stored only after you provide it)  
-5. Whether to enable Adzuna/SerpAPI keys for live discovery  
+| File | Purpose |
+|------|---------|
+| `config/candidate_profile.yaml` | Identity, auth notes, review/approval flags |
+| `candidate/*.yaml` | Verified experience/skills/projects/achievements/certs |
+| `config/job_preferences.yaml` | Filters and thresholds |
+| `config/scoring_rules.yaml` | Match weights |
+| `config/search_sources.yaml` | Discovery sources |
 
-## Recommended next command
+## What is intentionally not automated yet
 
-```bash
-python -m src.cli import-resume resumes/master/YOUR_RESUME.md
-```
+- Live Adzuna / SerpAPI connectors (config hooks present)
+- Browser form filling / CAPTCHA / LinkedIn messaging
+- Automatic application submission (never)

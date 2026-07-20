@@ -19,9 +19,11 @@ if str(PROJECT_ROOT) not in sys.path:
 from src.approval.queue import ApprovalQueue
 from src.application_support.interview import prepare_interview
 from src.application_support.prepare import prepare_application
-from src.common.config import load_candidate_profile, reload_config
+from src.common.config import reload_config
 from src.common.logging_config import setup_logging
 from src.common.profile_loader import load_candidate_knowledge_base
+from src.common.profile_review import add_missing_fact, review_profile
+from src.common.profile_validation import validate_profile
 from src.common.resume_import import import_resume
 from src.job_discovery.discover import discover_jobs
 from src.matching.analyze import analyze_jobs
@@ -44,28 +46,105 @@ def initialize_profile() -> None:
     """Validate profile/config and ensure tracker files exist."""
     reload_config()
     profile = load_candidate_knowledge_base()
-    ApplicationTracker()  # ensure CSV exists
-    ApprovalQueue()  # ensure queue file can be created lazily
+    ApplicationTracker()
+    ApprovalQueue()
     console.print("[green]Profile loaded[/green]")
     console.print(f"Name: {profile.full_name} ({profile.preferred_name})")
     console.print(f"Location: {profile.location_city}, {profile.location_state}")
     console.print(f"Resume imported: {profile.resume_imported}")
+    console.print(f"Profile reviewed: {profile.profile_reviewed}")
+    console.print(f"Profile approved: {profile.profile_approved}")
     console.print(f"Verified experiences: {len(profile.experiences)}")
     console.print(f"Verified skills: {len(profile.skills)}")
     if not profile.resume_imported:
         console.print(
             "[yellow]Action required:[/yellow] place resume under resumes/master/ "
-            "and run import-resume before applying."
+            "and run `python -m src.cli import-resume --auto`."
+        )
+    elif not profile.profile_approved:
+        console.print(
+            "[yellow]Next:[/yellow] `python -m src.cli review-profile` "
+            "then `python -m src.cli validate-profile`."
         )
 
 
 @main.command("import-resume")
-@click.argument("path", type=click.Path(exists=True, path_type=Path))
+@click.argument("path", required=False, type=click.Path(exists=True, path_type=Path))
+@click.option("--auto", is_flag=True, default=False, help="Auto-detect the single resume in resumes/master/")
 @click.option("--dry-run", is_flag=True, default=False)
-def import_resume_cmd(path: Path, dry_run: bool) -> None:
-    """Import a Markdown/text resume into the verified knowledge base."""
-    result = import_resume(path, dry_run=dry_run)
+def import_resume_cmd(path: Path | None, auto: bool, dry_run: bool) -> None:
+    """Import a PDF/DOCX/Markdown/TXT resume into the verified knowledge base."""
+    if not auto and path is None:
+        raise click.UsageError("Provide a resume PATH or use --auto.")
+    result = import_resume(path, auto=auto, dry_run=dry_run)
     console.print_json(json.dumps(result, default=str))
+    if not dry_run:
+        console.print(
+            "[green]Import complete.[/green] "
+            "Review facts with: [bold]python -m src.cli review-profile[/bold]"
+        )
+
+
+@main.command("review-profile")
+@click.option("--list-only", is_flag=True, default=False, help="List facts without interactive prompts")
+@click.option(
+    "--approve-all-pending",
+    is_flag=True,
+    default=False,
+    help="Approve all pending non-unsupported facts (scriptable)",
+)
+@click.option("--mark-reviewed", is_flag=True, default=False, help="Mark profile_reviewed=true")
+@click.option(
+    "--mark-approved",
+    is_flag=True,
+    default=False,
+    help="Mark profile_approved=true (requires reviewed)",
+)
+@click.option("--add-skill", default=None, help="Add a missing skill during review")
+@click.option("--add-achievement", default=None, help="Add a missing achievement during review")
+def review_profile_cmd(
+    list_only: bool,
+    approve_all_pending: bool,
+    mark_reviewed: bool,
+    mark_approved: bool,
+    add_skill: str | None,
+    add_achievement: str | None,
+) -> None:
+    """Interactively review extracted candidate facts."""
+    if add_skill:
+        console.print_json(json.dumps(add_missing_fact(category="skill", text=add_skill)))
+    if add_achievement:
+        console.print_json(
+            json.dumps(add_missing_fact(category="achievement", text=add_achievement))
+        )
+    result = review_profile(
+        interactive=not list_only and not approve_all_pending,
+        approve_all_pending=approve_all_pending,
+        mark_reviewed=mark_reviewed or approve_all_pending,
+        mark_approved=mark_approved,
+    )
+    console.print_json(json.dumps(result, default=str))
+
+
+@main.command("validate-profile")
+def validate_profile_cmd() -> None:
+    """Validate the candidate knowledge base and print readiness."""
+    report = validate_profile()
+    console.print(f"[bold]Readiness:[/bold] {report['readiness_percentage']}%")
+    console.print(
+        f"reviewed={report['profile_reviewed']} approved={report['profile_approved']} "
+        f"ready_for_tailoring={report['ready_for_tailoring']}"
+    )
+    table = Table(title="Validation issues")
+    table.add_column("Severity")
+    table.add_column("Message")
+    for issue in report["issues"]:
+        table.add_row(issue["severity"], issue["message"])
+    if report["issues"]:
+        console.print(table)
+    else:
+        console.print("[green]No issues found.[/green]")
+    console.print_json(json.dumps({"counts": report["counts"], "readiness_percentage": report["readiness_percentage"]}))
 
 
 @main.command("discover-jobs")
@@ -126,8 +205,17 @@ def daily_run_cmd(dry_run: bool, prepare_limit: int) -> None:
     tracker = ApplicationTracker()
     follow_ups = tracker.follow_ups_due()
     console.print(
-        f"Resume imported={profile.resume_imported} | follow-ups due={len(follow_ups)}"
+        f"Resume imported={profile.resume_imported} | "
+        f"reviewed={profile.profile_reviewed} | "
+        f"approved={profile.profile_approved} | "
+        f"follow-ups due={len(follow_ups)}"
     )
+    if not profile.is_ready_for_tailoring:
+        console.print(
+            "[yellow]Profile not approved for tailored resumes.[/yellow] "
+            "daily-run will discover/analyze/report, but will NOT tailor resumes "
+            "until `review-profile` + approval are complete."
+        )
 
     console.print("[bold]Phase 2: Discover[/bold]")
     discovery = discover_jobs(dry_run=dry_run)
@@ -137,14 +225,18 @@ def daily_run_cmd(dry_run: bool, prepare_limit: int) -> None:
 
     console.print("[bold]Phase 4: Prepare[/bold]")
     prepared = []
-    candidates = sorted(
-        [r for r in analysis["reports"] if not r.rejected and r.match_score >= 75],
-        key=lambda r: r.match_score,
-        reverse=True,
-    )[:prepare_limit]
-    for report in candidates:
-        prepared.append(
-            prepare_application(report.job_id, profile, dry_run=dry_run)
+    if profile.is_ready_for_tailoring:
+        candidates = sorted(
+            [r for r in analysis["reports"] if not r.rejected and r.match_score >= 75],
+            key=lambda r: r.match_score,
+            reverse=True,
+        )[:prepare_limit]
+        for report in candidates:
+            prepared.append(prepare_application(report.job_id, profile, dry_run=dry_run))
+    else:
+        console.print(
+            "[yellow]Skipping tailored resume / application package generation "
+            "until profile is reviewed and approved.[/yellow]"
         )
 
     console.print("[bold]Phase 5: Report[/bold]")

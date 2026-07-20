@@ -1,0 +1,73 @@
+schema_version: '1.1'
+resume_imported: true
+certifications:
+- id: cert_001
+  name: Building Scalable Java Applications
+  issuer: Coursera
+  date: null
+  source_file: JXTG RES.pdf
+  source_section: certifications
+  supporting_text: • Building Scalable Java Applications – Coursera
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
+- id: cert_002
+  name: Introduction to Cloud Architecture
+  issuer: LinkedIn Learning
+  date: null
+  source_file: JXTG RES.pdf
+  source_section: certifications
+  supporting_text: • Introduction to Cloud Architecture – LinkedIn Learning
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
+- id: cert_003
+  name: API Development with Java
+  issuer: Coursera
+  date: null
+  source_file: JXTG RES.pdf
+  source_section: certifications
+  supporting_text: • API Development with Java – Coursera
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
+- id: cert_004
+  name: Generative AI Concepts and Applications
+  issuer: NASBA
+  date: null
+  source_file: JXTG RES.pdf
+  source_section: certifications
+  supporting_text: • Generative AI Concepts and Applications – NASBA
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
+- id: cert_005
+  name: 'Database Fundamentals: SQL'
+  issuer: LinkedIn Learning
+  date: null
+  source_file: JXTG RES.pdf
+  source_section: certifications
+  supporting_text: '• Database Fundamentals: SQL – LinkedIn Learning'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null

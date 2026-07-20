@@ -29,6 +29,11 @@ class ResumeTailor:
                 f"Refusing to tailor resume for score {report.match_score} (< 75). "
                 "Prepare analysis only."
             )
+        if not self.profile.is_ready_for_tailoring:
+            raise ValueError(
+                "Refusing to tailor resume until the candidate profile is imported, "
+                "reviewed, and approved (`review-profile` + `profile_approved`)."
+            )
         if not self.profile.resume_imported and not self.profile.experiences:
             logger.warning("Tailoring with incomplete profile — output marked NOT application-ready")
 
