@@ -1,0 +1,16 @@
+schema_version: "1.0"
+resume_imported: false
+skills: []
+# - name: "Python"
+#   category: "language"  # language | framework | ml | cloud | tool | soft
+#   proficiency: null
+#   source_file: "resumes/master/..."
+#   supporting_text: "..."
+#   confidence: high
+#   can_include_in_resume: true
+#   claim_type: verified_fact
+#   years_used: null
+#   contexts: []  # employers/projects where used
+
+notes:
+  - "Empty until resume import. Never add skills from job descriptions alone."

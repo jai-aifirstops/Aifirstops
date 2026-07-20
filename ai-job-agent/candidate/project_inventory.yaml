@@ -1,0 +1,19 @@
+schema_version: "1.0"
+resume_imported: false
+projects: []
+# - id: proj_001
+#   name: "..."
+#   role: "..."
+#   dates: null
+#   technologies: []
+#   description: "..."
+#   measurable_results: []
+#   source_file: "..."
+#   supporting_text: "..."
+#   confidence: high
+#   can_include_in_resume: true
+#   claim_type: verified_fact
+#   industry_domain: null
+
+notes:
+  - "Empty until resume or portfolio import."

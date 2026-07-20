@@ -1,0 +1,113 @@
+{
+  "jobs": [
+    {
+      "job_id": "acme-ai-eng-001",
+      "title": "AI Engineer",
+      "company": "Acme AI",
+      "location": "Austin, TX",
+      "work_arrangement": "hybrid",
+      "employment_type": "Full-time",
+      "salary_range": "$110,000 - $140,000",
+      "posting_date": "2026-07-19",
+      "original_url": "https://careers.acme-ai.example/jobs/ai-engineer",
+      "application_url": "https://careers.acme-ai.example/jobs/ai-engineer/apply",
+      "description": "Acme AI is hiring an AI Engineer to build production LLM applications. You will design RAG pipelines, evaluate model quality, and ship Python FastAPI services on AWS. Requirements: Bachelor's or Master's in Computer Science, 0-3 years experience, Python, APIs, familiarity with LLMs and retrieval augmented generation. Preferred: LangChain, Docker, PostgreSQL. We welcome candidates on STEM OPT; sponsorship may be available for strong fits.",
+      "required_qualifications": [
+        "Bachelor's or Master's in Computer Science",
+        "0-3 years of experience",
+        "Python",
+        "Building APIs",
+        "Familiarity with LLMs and RAG"
+      ],
+      "preferred_qualifications": [
+        "LangChain",
+        "Docker",
+        "PostgreSQL"
+      ],
+      "responsibilities": [
+        "Build and maintain production RAG systems",
+        "Develop FastAPI services for AI features",
+        "Evaluate LLM quality and reliability"
+      ],
+      "technology_stack": ["Python", "FastAPI", "AWS", "RAG", "LLM", "Docker"],
+      "experience_years_min": 0,
+      "experience_years_max": 3,
+      "education_requirement": "Master's in Computer Science preferred",
+      "sponsorship_language": "sponsorship may be available for strong fits",
+      "source": "company_career_page",
+      "company_verified": true
+    },
+    {
+      "job_id": "acme-ai-eng-001-dup",
+      "title": "AI Engineer",
+      "company": "Acme AI Inc",
+      "location": "Austin, Texas",
+      "work_arrangement": "hybrid",
+      "employment_type": "Full-time",
+      "original_url": "https://www.linkedin.com/jobs/view/999",
+      "application_url": "https://www.linkedin.com/jobs/view/999",
+      "description": "Acme AI is hiring an AI Engineer to build production LLM applications. You will design RAG pipelines, evaluate model quality, and ship Python FastAPI services on AWS. Requirements: Bachelor's or Master's in Computer Science, 0-3 years experience, Python, APIs, familiarity with LLMs and retrieval augmented generation. Preferred: LangChain, Docker, PostgreSQL.",
+      "required_qualifications": ["Python", "LLMs"],
+      "source": "serpapi",
+      "company_verified": true
+    },
+    {
+      "job_id": "secureco-ml-001",
+      "title": "Machine Learning Engineer",
+      "company": "SecureCo Defense",
+      "location": "Washington, DC",
+      "work_arrangement": "onsite",
+      "employment_type": "Full-time",
+      "description": "Build ML models for defense customers. Must be a U.S. citizen. Active security clearance required. 5+ years experience.",
+      "required_qualifications": ["U.S. citizenship", "Active security clearance", "5+ years ML experience"],
+      "citizenship_or_clearance_language": "Must be a U.S. citizen. Active security clearance required.",
+      "experience_years_min": 5,
+      "source": "fixture",
+      "company_verified": true
+    },
+    {
+      "job_id": "cloudify-backend-ai-001",
+      "title": "Backend Engineer, AI Platform",
+      "company": "Cloudify",
+      "location": "Remote, United States",
+      "work_arrangement": "remote",
+      "employment_type": "Full-time",
+      "posting_date": "2026-07-18",
+      "original_url": "https://jobs.ashbyhq.com/cloudify/backend-ai",
+      "application_url": "https://jobs.ashbyhq.com/cloudify/backend-ai",
+      "description": "Cloudify seeks a Backend Engineer to build APIs and data pipelines powering generative AI features. Stack: Python, FastAPI, GCP, Postgres, vector search. 1-4 years experience. Master's degree a plus. Work authorization required; sponsorship not mentioned.",
+      "required_qualifications": [
+        "Python",
+        "REST APIs",
+        "1-4 years experience",
+        "Cloud experience (GCP/AWS)"
+      ],
+      "preferred_qualifications": [
+        "Generative AI",
+        "Vector databases",
+        "Master's degree"
+      ],
+      "responsibilities": [
+        "Design backend services for AI products",
+        "Build data pipelines for embeddings and evaluation"
+      ],
+      "technology_stack": ["Python", "FastAPI", "GCP", "PostgreSQL"],
+      "experience_years_min": 1,
+      "experience_years_max": 4,
+      "source": "fixture",
+      "company_verified": true
+    },
+    {
+      "job_id": "mega-staff-001",
+      "title": "Staff Machine Learning Engineer",
+      "company": "MegaScale",
+      "location": "San Francisco, CA",
+      "employment_type": "Full-time",
+      "description": "Staff ML Engineer to lead platform strategy. 10+ years required.",
+      "required_qualifications": ["10+ years experience"],
+      "experience_years_min": 10,
+      "source": "fixture",
+      "company_verified": true
+    }
+  ]
+}

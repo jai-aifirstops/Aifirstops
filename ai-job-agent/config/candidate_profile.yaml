@@ -1,0 +1,65 @@
+# Verified candidate profile — update via `initialize-profile` or resume import.
+# Do not invent experience here. Experience lives in candidate/verified_experience.yaml.
+
+full_name: "Jai deep Ponnam"
+preferred_name: "Jai"
+email: "jaideep.ponnam@aifirstops.com"  # from workspace owner identity; CONFIRM if different
+phone: null  # REQUIRES USER CONFIRMATION
+location:
+  city: "Austin"
+  state: "Texas"
+  country: "United States"
+  open_to_relocation: false  # REQUIRES USER CONFIRMATION
+
+education:
+  - degree: "Master of Science in Computer Science"
+    institution: "University of Memphis"
+    location: "Memphis, Tennessee"
+    graduation_date: null  # REQUIRES USER CONFIRMATION — not in workspace resume
+    gpa: null
+    source: "user_provided_profile"
+    confidence: "high"
+
+work_authorization:
+  status: "STEM OPT"
+  legally_authorized_to_work_in_us: null  # REQUIRES USER CONFIRMATION before any application answer
+  requires_sponsorship_now_or_future: null  # REQUIRES USER CONFIRMATION
+  notes: >
+    Candidate reports STEM OPT. Do not auto-answer authorization or sponsorship
+    questions. Flag posting language for review. Do not reject solely because
+    sponsorship is unclear.
+
+target_roles:
+  - "AI Engineer"
+  - "Generative AI Engineer"
+  - "Machine Learning Engineer"
+  - "Applied AI Engineer"
+  - "LLM Engineer"
+  - "AI Software Engineer"
+  - "Backend Engineer working on AI products"
+  - "Python Engineer working on AI or ML systems"
+
+employment_type_preference: "Full-time"
+
+preferred_locations:
+  - "Austin, Texas"
+  - "Remote within the United States"
+  - "Other strong U.S. technology markets when highly relevant"
+
+career_priorities:
+  - "Technical fit"
+  - "Career growth"
+  - "Quality of the engineering work"
+  - "Opportunity to work on production AI systems"
+
+avoid_roles_requiring:
+  - "U.S. citizenship"
+  - "Active security clearance"
+  - "Permanent residency"
+  # unless posting explicitly permits STEM OPT / current authorization
+
+years_of_experience_verified: null  # set after resume import
+resume_imported: false
+profile_notes:
+  - "No resume PDF/MD found in workspace at initialization."
+  - "Import resume before analyzing jobs or tailoring applications."
