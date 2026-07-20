@@ -1,0 +1,34 @@
+# Verified experience knowledge base.
+# Every entry MUST cite a source file and supporting evidence.
+# Unsupported claims must never appear in applications.
+
+schema_version: "1.0"
+last_updated: null
+resume_imported: false
+source_files_scanned: []
+
+experiences: []
+# Example shape (do not invent real entries):
+# - id: exp_001
+#   employer: "Acme Corp"
+#   role: "Software Engineer"
+#   start_date: "2022-01"
+#   end_date: "2023-06"
+#   location: "Austin, TX"
+#   employment_type: "Full-time"
+#   technologies: ["Python", "FastAPI"]
+#   responsibilities:
+#     - text: "Built REST APIs for ..."
+#       confidence: high
+#       can_include_in_resume: true
+#       claim_type: verified_fact  # verified_fact | reasonable_reframing | unsupported
+#       supporting_text: "exact quote from resume"
+#       source_file: "resumes/master/Jaideep_Ponnam_Resume.md"
+#   measurable_results: []
+#   industry_domain: null
+#   confidence: high
+#   can_include_in_resume: true
+
+notes:
+  - "Workspace contained no resume at initialization (Nova Market repo only)."
+  - "Run import-resume after providing a resume file under resumes/master/."

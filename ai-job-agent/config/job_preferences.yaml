@@ -1,0 +1,59 @@
+preferred_employment_types:
+  - "Full-time"
+
+preferred_work_arrangements:
+  - "remote"
+  - "hybrid"
+  - "onsite"  # acceptable in Austin / strong U.S. tech markets
+
+preferred_locations:
+  - "Austin"
+  - "Texas"
+  - "Remote"
+  - "United States"
+
+experience_range:
+  min_years: 0
+  max_years: 4
+  note: "Entry-level through early-career; 0–4 years preferred"
+
+priority_technologies:
+  - "Python"
+  - "Machine Learning"
+  - "Generative AI"
+  - "LLM"
+  - "RAG"
+  - "Agents"
+  - "APIs"
+  - "Backend"
+  - "Cloud"
+  - "Model Deployment"
+  - "Evaluation"
+  - "Data Pipelines"
+
+posting_recency:
+  prefer_within_hours: 24
+  accept_within_days: 3
+  max_age_days: 14
+
+reject_when:
+  - "expired"
+  - "broken_application_link"
+  - "scam_or_payment_required"
+  - "unverifiable_company"
+  - "unrelated_to_target_career"
+  - "active_security_clearance_required"
+  - "us_citizenship_or_permanent_residency_required"
+  - "senior_staff_principal_director_management_beyond_experience"
+  - "unpaid_full_time"
+  - "staffing_repost_without_client_details"
+  - "duplicate_of_stronger_posting"
+
+do_not_auto_reject_for:
+  - "sponsorship_unclear"
+
+minimum_score_to_analyze: 65
+minimum_score_to_tailor_resume: 75
+minimum_score_to_prepare_application: 75
+
+daily_prepare_limit: 5

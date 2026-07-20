@@ -1,0 +1,57 @@
+# Configurable job discovery sources.
+# Network integrations are optional; local JSON/fixture imports always work.
+
+prefer_official_career_pages: true
+dedupe_prefer_source_order:
+  - "company_career_page"
+  - "greenhouse"
+  - "lever"
+  - "ashby"
+  - "manual"
+  - "fixture"
+  - "adzuna"
+  - "serpapi"
+
+sources:
+  - id: manual
+    type: local_json
+    enabled: true
+    description: "Manually dropped job JSON files in jobs/raw/"
+    path: "jobs/raw"
+
+  - id: fixtures
+    type: local_json
+    enabled: true
+    description: "Sample/fixture jobs for offline development and tests"
+    path: "tests/fixtures/jobs"
+
+  - id: adzuna
+    type: adzuna_api
+    enabled: false
+    description: "Adzuna Job Search API — set ADZUNA_APP_ID and ADZUNA_APP_KEY"
+    country: "us"
+    queries:
+      - "AI Engineer"
+      - "Machine Learning Engineer"
+      - "LLM Engineer"
+      - "Generative AI Engineer"
+      - "Applied AI Engineer"
+    location: "Austin, Texas"
+    results_per_page: 20
+
+  - id: serpapi_google_jobs
+    type: serpapi
+    enabled: false
+    description: "SerpAPI Google Jobs — set SERPAPI_API_KEY"
+    queries:
+      - "AI Engineer"
+      - "Machine Learning Engineer remote"
+      - "LLM Engineer"
+      - "Generative AI Engineer"
+
+rate_limits:
+  default_delay_seconds: 1.0
+  max_retries: 3
+
+respect_robots_txt: true
+user_agent: "AIJobAgent/0.1 (+local personal job search; respectful; contact via candidate email)"

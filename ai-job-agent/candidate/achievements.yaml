@@ -1,0 +1,16 @@
+schema_version: "1.0"
+resume_imported: false
+achievements: []
+# - id: ach_001
+#   text: "..."
+#   metric: null
+#   related_experience_id: null
+#   related_project_id: null
+#   source_file: "..."
+#   supporting_text: "..."
+#   confidence: high
+#   can_include_in_resume: true
+#   claim_type: verified_fact
+
+notes:
+  - "Empty until resume import. Metrics must be source-backed."

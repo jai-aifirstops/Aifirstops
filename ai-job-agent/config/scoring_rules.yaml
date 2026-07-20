@@ -1,0 +1,120 @@
+weights:
+  core_technical_skills: 25
+  relevant_experience: 20
+  ai_ml_llm_relevance: 15
+  seniority_alignment: 10
+  education_alignment: 5
+  location_arrangement: 5
+  industry_interest: 5
+  career_growth: 10
+  application_practicality: 5
+
+penalties:
+  citizenship_or_pr_required: "reject"
+  active_clearance_required: "reject"
+  years_required_over_verified_by_more_than_5: -20
+  major_mandatory_skill_gaps:
+    min: -5
+    max: -20
+  unclear_or_suspicious_employer: -20
+  staffing_repost_weak_info: -10
+  expired_or_broken: "reject"
+
+classifications:
+  exceptional:
+    min: 85
+    max: 100
+  strong:
+    min: 75
+    max: 84
+  possible:
+    min: 65
+    max: 74
+  low_priority_stretch:
+    min: 50
+    max: 64
+  skip:
+    min: 0
+    max: 49
+
+seniority_reject_keywords:
+  - "staff engineer"
+  - "principal engineer"
+  - "distinguished engineer"
+  - "director"
+  - "vp of"
+  - "head of engineering"
+  - "engineering manager"
+  - "manager,"
+  - "senior staff"
+
+seniority_caution_keywords:
+  - "senior"
+  - "lead"
+  - "5+ years"
+  - "6+ years"
+  - "7+ years"
+  - "8+ years"
+  - "10+ years"
+
+citizenship_clearance_patterns:
+  - "must be a u.s. citizen"
+  - "us citizenship required"
+  - "u.s. citizenship required"
+  - "must be a us citizen"
+  - "permanent resident required"
+  - "green card required"
+  - "active security clearance"
+  - "secret clearance"
+  - "top secret"
+  - "ts/sci"
+  - "requires clearance"
+
+ai_relevance_keywords:
+  - "llm"
+  - "large language model"
+  - "generative ai"
+  - "genai"
+  - "rag"
+  - "retrieval augmented"
+  - "agent"
+  - "agents"
+  - "prompt"
+  - "fine-tun"
+  - "machine learning"
+  - "deep learning"
+  - "nlp"
+  - "transformer"
+  - "embedding"
+  - "vector"
+  - "inference"
+  - "model deployment"
+  - "mlops"
+  - "ai engineer"
+  - "ml engineer"
+
+core_skill_keywords:
+  - "python"
+  - "api"
+  - "rest"
+  - "fastapi"
+  - "flask"
+  - "django"
+  - "backend"
+  - "aws"
+  - "gcp"
+  - "azure"
+  - "docker"
+  - "kubernetes"
+  - "sql"
+  - "postgres"
+  - "pytorch"
+  - "tensorflow"
+  - "langchain"
+  - "llamaindex"
+  - "openai"
+  - "huggingface"
+  - "spark"
+  - "airflow"
+  - "ci/cd"
+  - "git"
