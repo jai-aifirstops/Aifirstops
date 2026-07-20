@@ -1,19 +1,25 @@
-schema_version: "1.0"
-resume_imported: false
-projects: []
-# - id: proj_001
-#   name: "..."
-#   role: "..."
-#   dates: null
-#   technologies: []
-#   description: "..."
-#   measurable_results: []
-#   source_file: "..."
-#   supporting_text: "..."
-#   confidence: high
-#   can_include_in_resume: true
-#   claim_type: verified_fact
-#   industry_domain: null
-
+schema_version: '1.1'
+resume_imported: true
+projects:
+- id: lead_001
+  name: Software Development Club | University of Memphis — Technical Workshop Lead
+  role: Technical Workshop Lead
+  dates: Spring 2025
+  technologies: []
+  description: Organized and facilitated coding workshops covering programming fundamentals
+    and cloud-based development tools.
+  measurable_results: []
+  source_file: JXTG RES.pdf
+  source_section: leadership
+  supporting_text: Software Development Club | University of Memphis | Technical Workshop
+    Lead | Spring 2025 – None
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: true
+  confirmation_reason: Imported from Technical Leadership; confirm project vs experience
+    classification
 notes:
-  - "Empty until resume or portfolio import."
+- Imported via import-resume.

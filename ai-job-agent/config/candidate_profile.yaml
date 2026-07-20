@@ -1,65 +1,151 @@
-# Verified candidate profile — update via `initialize-profile` or resume import.
-# Do not invent experience here. Experience lives in candidate/verified_experience.yaml.
-
-full_name: "Jai deep Ponnam"
-preferred_name: "Jai"
-email: "jaideep.ponnam@aifirstops.com"  # from workspace owner identity; CONFIRM if different
-phone: null  # REQUIRES USER CONFIRMATION
+full_name: Jaideep Ponnam
+preferred_name: Jai
+email: jaideepponnam@gmail.com
+phone: 901-542-8284
 location:
-  city: "Austin"
-  state: "Texas"
-  country: "United States"
-  open_to_relocation: false  # REQUIRES USER CONFIRMATION
-
+  city: Austin
+  state: Texas
+  country: United States
+  open_to_relocation: false
 education:
-  - degree: "Master of Science in Computer Science"
-    institution: "University of Memphis"
-    location: "Memphis, Tennessee"
-    graduation_date: null  # REQUIRES USER CONFIRMATION — not in workspace resume
-    gpa: null
-    source: "user_provided_profile"
-    confidence: "high"
-
+- degree: Master’s, Computer Science
+  institution: University of Memphis
+  location: null
+  start_date: Jan 2024
+  graduation_date: May 2025
+  gpa: null
+  source: JXTG RES.pdf
+  source_file: JXTG RES.pdf
+  source_section: education
+  supporting_text: University of Memphis Jan 2024 – May 2025 | Master’s, Computer
+    Science
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
 work_authorization:
-  status: "STEM OPT"
-  legally_authorized_to_work_in_us: null  # REQUIRES USER CONFIRMATION before any application answer
-  requires_sponsorship_now_or_future: null  # REQUIRES USER CONFIRMATION
-  notes: >
-    Candidate reports STEM OPT. Do not auto-answer authorization or sponsorship
-    questions. Flag posting language for review. Do not reject solely because
-    sponsorship is unclear.
+  status: STEM OPT
+  legally_authorized_to_work_in_us: null
+  requires_sponsorship_now_or_future: null
+  notes: 'Candidate reports STEM OPT. Do not auto-answer authorization or sponsorship
+    questions. Flag posting language for review. Do not reject solely because sponsorship
+    is unclear.
 
+    '
 target_roles:
-  - "AI Engineer"
-  - "Generative AI Engineer"
-  - "Machine Learning Engineer"
-  - "Applied AI Engineer"
-  - "LLM Engineer"
-  - "AI Software Engineer"
-  - "Backend Engineer working on AI products"
-  - "Python Engineer working on AI or ML systems"
-
-employment_type_preference: "Full-time"
-
+- AI Engineer
+- Generative AI Engineer
+- Machine Learning Engineer
+- Applied AI Engineer
+- LLM Engineer
+- AI Software Engineer
+- Backend Engineer working on AI products
+- Python Engineer working on AI or ML systems
+employment_type_preference: Full-time
 preferred_locations:
-  - "Austin, Texas"
-  - "Remote within the United States"
-  - "Other strong U.S. technology markets when highly relevant"
-
+- Austin, Texas
+- Remote within the United States
+- Other strong U.S. technology markets when highly relevant
 career_priorities:
-  - "Technical fit"
-  - "Career growth"
-  - "Quality of the engineering work"
-  - "Opportunity to work on production AI systems"
-
+- Technical fit
+- Career growth
+- Quality of the engineering work
+- Opportunity to work on production AI systems
 avoid_roles_requiring:
-  - "U.S. citizenship"
-  - "Active security clearance"
-  - "Permanent residency"
-  # unless posting explicitly permits STEM OPT / current authorization
-
-years_of_experience_verified: null  # set after resume import
-resume_imported: false
+- U.S. citizenship
+- Active security clearance
+- Permanent residency
+years_of_experience_verified: 4.4
+resume_imported: true
 profile_notes:
-  - "No resume PDF/MD found in workspace at initialization."
-  - "Import resume before analyzing jobs or tailoring applications."
+- Resume imported from JXTG RES.pdf.
+- Resume lists location Atlanta, GA; preferred application location remains Austin, Texas.
+  CONFIRM which location to use on applications.
+- Greenlight role shows only Jul 2025 — confirm end date / whether current.
+- DXC (Nov 2021–Dec 2023) overlaps ISRO internship (Mar 2021–Jun 2022) — confirm both
+  are accurate as listed.
+- Work-authorization / sponsorship answers still REQUIRE USER CONFIRMATION.
+resume_location:
+  city: Atlanta
+  state: GA
+  country: United States
+certifications:
+- id: cert_001
+  name: Building Scalable Java Applications
+  issuer: Coursera
+  date: null
+  source_file: JXTG RES.pdf
+  source_section: certifications
+  supporting_text: • Building Scalable Java Applications – Coursera
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
+- id: cert_002
+  name: Introduction to Cloud Architecture
+  issuer: LinkedIn Learning
+  date: null
+  source_file: JXTG RES.pdf
+  source_section: certifications
+  supporting_text: • Introduction to Cloud Architecture – LinkedIn Learning
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
+- id: cert_003
+  name: API Development with Java
+  issuer: Coursera
+  date: null
+  source_file: JXTG RES.pdf
+  source_section: certifications
+  supporting_text: • API Development with Java – Coursera
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
+- id: cert_004
+  name: Generative AI Concepts and Applications
+  issuer: NASBA
+  date: null
+  source_file: JXTG RES.pdf
+  source_section: certifications
+  supporting_text: • Generative AI Concepts and Applications – NASBA
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
+- id: cert_005
+  name: 'Database Fundamentals: SQL'
+  issuer: LinkedIn Learning
+  date: null
+  source_file: JXTG RES.pdf
+  source_section: certifications
+  supporting_text: '• Database Fundamentals: SQL – LinkedIn Learning'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
+profile_reviewed: false
+profile_approved: false
+last_resume_import:
+  source_file: JXTG RES.pdf
+  imported_on: '2026-07-20'
+  format: .pdf

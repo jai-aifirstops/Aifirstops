@@ -1,0 +1,29 @@
+Jaideep Ponnam
+Austin, TX | 901-555-0100 | jaideep.sample@example.com
+
+SUMMARY
+Software engineer focused on Python APIs and applied AI systems.
+
+EDUCATION
+University of Memphis                                                                 Jan 2024 – May 2025
+Master’s, Computer Science
+
+WORK EXPERIENCE
+Fixture Labs                                                                          Jun 2023 – Aug 2023
+Software Engineer Intern                                                              Austin, Texas, USA
+• Built Python REST APIs for internal data tools using FastAPI
+• Improved data preprocessing runtime by 35% for ML experimentation
+• Collaborated with engineers to deploy services with Docker
+
+TECHNICAL SKILLS
+• Programming Languages: Python, Java, TypeScript
+• Backend: FastAPI, REST APIs, PostgreSQL
+• Cloud & DevOps: Docker, AWS, CI/CD Pipelines
+
+PROJECTS
+Campus FAQ RAG Prototype
+• Built a retrieval-augmented FAQ demo using embeddings and Python
+• Evaluated answer quality with simple precision/recall checks
+
+CERTIFICATIONS
+• Generative AI Concepts and Applications – NASBA

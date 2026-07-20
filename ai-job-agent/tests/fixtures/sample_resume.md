@@ -1,34 +1,26 @@
-# SYNTHETIC TEST FIXTURE — NOT JAI'S REAL RESUME
+# Jaideep Ponnam
 
-> This file exists only to exercise the resume importer in unit tests.
-> It must never be treated as verified candidate experience for real applications.
-
-# Test Candidate
-
-Austin, Texas | test@example.com
+Austin, TX | 901-555-0100 | jaideep.sample@example.com
 
 ## Summary
 
-Synthetic profile for parser tests.
+Software engineer focused on Python APIs and applied AI systems.
 
-## Skills
+## Education
 
-Python, FastAPI, REST APIs, SQL, PostgreSQL, Docker, Git, PyTorch, Machine Learning, NLP, AWS
+### Master of Science in Computer Science
+University of Memphis  
+Jan 2024 – May 2025
 
 ## Experience
 
 ### Software Engineer Intern at Fixture Labs
-Jun 2023 – Aug 2023
+Jun 2023 – Aug 2023 | Austin, Texas, USA
 
 - Built Python REST APIs for internal data tools using FastAPI
-- Implemented data preprocessing pipelines for ML experimentation
+- Improved data preprocessing runtime by 35% for ML experimentation
+- Invented world's first quantum LLM chip
 - Collaborated with engineers to deploy services with Docker
-
-### Research Assistant at Fixture University
-Jan 2022 – May 2023
-
-- Assisted with NLP experiments and evaluation metrics in Python
-- Documented model training workflows and dataset preparation steps
 
 ## Projects
 
@@ -37,13 +29,10 @@ Jan 2022 – May 2023
 - Built a retrieval-augmented FAQ demo using embeddings and Python
 - Evaluated answer quality with simple precision/recall checks
 
-### ML Classification Pipeline
+## Skills
 
-- Trained a text classification model in PyTorch for course project
-- Packaged inference script with clear README and reproducible steps
+Python, FastAPI, REST APIs, SQL, PostgreSQL, Docker, Git, PyTorch, Machine Learning, NLP, AWS
 
-## Education
+## Certifications
 
-### Master of Science in Computer Science
-University of Memphis
-2024
+- Generative AI Concepts and Applications – NASBA

@@ -1,16 +1,851 @@
-schema_version: "1.0"
-resume_imported: false
-skills: []
-# - name: "Python"
-#   category: "language"  # language | framework | ml | cloud | tool | soft
-#   proficiency: null
-#   source_file: "resumes/master/..."
-#   supporting_text: "..."
-#   confidence: high
-#   can_include_in_resume: true
-#   claim_type: verified_fact
-#   years_used: null
-#   contexts: []  # employers/projects where used
-
+schema_version: '1.1'
+resume_imported: true
+skills:
+- name: Java
+  category: Programming Languages
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Programming Languages: Java, TypeScript, JavaScript (ES6+),
+    Python, C#, Go'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: TypeScript
+  category: Programming Languages
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Programming Languages: Java, TypeScript, JavaScript (ES6+),
+    Python, C#, Go'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: JavaScript (ES6+)
+  category: Programming Languages
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Programming Languages: Java, TypeScript, JavaScript (ES6+),
+    Python, C#, Go'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Python
+  category: Programming Languages
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Programming Languages: Java, TypeScript, JavaScript (ES6+),
+    Python, C#, Go'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: C#
+  category: Programming Languages
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Programming Languages: Java, TypeScript, JavaScript (ES6+),
+    Python, C#, Go'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Go
+  category: Programming Languages
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Programming Languages: Java, TypeScript, JavaScript (ES6+),
+    Python, C#, Go'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: React.js
+  category: Frontend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Frontend: React.js, Angular, Material UI, CSS, Responsive UI
+    Design'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Angular
+  category: Frontend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Frontend: React.js, Angular, Material UI, CSS, Responsive UI
+    Design'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Material UI
+  category: Frontend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Frontend: React.js, Angular, Material UI, CSS, Responsive UI
+    Design'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: CSS
+  category: Frontend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Frontend: React.js, Angular, Material UI, CSS, Responsive UI
+    Design'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Responsive UI Design
+  category: Frontend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Frontend: React.js, Angular, Material UI, CSS, Responsive UI
+    Design'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Spring Boot
+  category: Backend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Backend: Spring Boot, Node.js, NestJS, Express.js, REST APIs,
+    Event-Driven Architecture, Kafka, Microservices,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Node.js
+  category: Backend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Backend: Spring Boot, Node.js, NestJS, Express.js, REST APIs,
+    Event-Driven Architecture, Kafka, Microservices,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: NestJS
+  category: Backend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Backend: Spring Boot, Node.js, NestJS, Express.js, REST APIs,
+    Event-Driven Architecture, Kafka, Microservices,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Express.js
+  category: Backend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Backend: Spring Boot, Node.js, NestJS, Express.js, REST APIs,
+    Event-Driven Architecture, Kafka, Microservices,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: REST APIs
+  category: Backend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Backend: Spring Boot, Node.js, NestJS, Express.js, REST APIs,
+    Event-Driven Architecture, Kafka, Microservices,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Event-Driven Architecture
+  category: Backend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Backend: Spring Boot, Node.js, NestJS, Express.js, REST APIs,
+    Event-Driven Architecture, Kafka, Microservices,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Kafka
+  category: Backend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Backend: Spring Boot, Node.js, NestJS, Express.js, REST APIs,
+    Event-Driven Architecture, Kafka, Microservices,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Microservices
+  category: Backend
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Backend: Spring Boot, Node.js, NestJS, Express.js, REST APIs,
+    Event-Driven Architecture, Kafka, Microservices,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Distributed Systems
+  category: other
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: Distributed Systems, API-First Design, Spring Data, Spring Batch,
+    J2EE, SOAP Web Services, JMS, JDBC,
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: API-First Design
+  category: other
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: Distributed Systems, API-First Design, Spring Data, Spring Batch,
+    J2EE, SOAP Web Services, JMS, JDBC,
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Spring Data
+  category: other
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: Distributed Systems, API-First Design, Spring Data, Spring Batch,
+    J2EE, SOAP Web Services, JMS, JDBC,
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Spring Batch
+  category: other
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: Distributed Systems, API-First Design, Spring Data, Spring Batch,
+    J2EE, SOAP Web Services, JMS, JDBC,
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: J2EE
+  category: other
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: Distributed Systems, API-First Design, Spring Data, Spring Batch,
+    J2EE, SOAP Web Services, JMS, JDBC,
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: SOAP Web Services
+  category: other
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: Distributed Systems, API-First Design, Spring Data, Spring Batch,
+    J2EE, SOAP Web Services, JMS, JDBC,
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: JMS
+  category: other
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: Distributed Systems, API-First Design, Spring Data, Spring Batch,
+    J2EE, SOAP Web Services, JMS, JDBC,
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: JDBC
+  category: other
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: Distributed Systems, API-First Design, Spring Data, Spring Batch,
+    J2EE, SOAP Web Services, JMS, JDBC,
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Transactions
+  category: other
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: Transactions
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: PostgreSQL
+  category: Databases
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Databases: PostgreSQL, MongoDB, CosmosDB, SQL Server, Oracle,
+    Redis'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: MongoDB
+  category: Databases
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Databases: PostgreSQL, MongoDB, CosmosDB, SQL Server, Oracle,
+    Redis'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: CosmosDB
+  category: Databases
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Databases: PostgreSQL, MongoDB, CosmosDB, SQL Server, Oracle,
+    Redis'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: SQL Server
+  category: Databases
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Databases: PostgreSQL, MongoDB, CosmosDB, SQL Server, Oracle,
+    Redis'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Oracle
+  category: Databases
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Databases: PostgreSQL, MongoDB, CosmosDB, SQL Server, Oracle,
+    Redis'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Redis
+  category: Databases
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Databases: PostgreSQL, MongoDB, CosmosDB, SQL Server, Oracle,
+    Redis'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Azure DevOps
+  category: Cloud & DevOps
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Cloud & DevOps: Azure DevOps, Docker, Kubernetes, Jenkins, CI/CD
+    Pipelines, Linux, AWS, GCP, Monitoring &'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Docker
+  category: Cloud & DevOps
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Cloud & DevOps: Azure DevOps, Docker, Kubernetes, Jenkins, CI/CD
+    Pipelines, Linux, AWS, GCP, Monitoring &'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Kubernetes
+  category: Cloud & DevOps
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Cloud & DevOps: Azure DevOps, Docker, Kubernetes, Jenkins, CI/CD
+    Pipelines, Linux, AWS, GCP, Monitoring &'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Jenkins
+  category: Cloud & DevOps
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Cloud & DevOps: Azure DevOps, Docker, Kubernetes, Jenkins, CI/CD
+    Pipelines, Linux, AWS, GCP, Monitoring &'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: CI/CD Pipelines
+  category: Cloud & DevOps
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Cloud & DevOps: Azure DevOps, Docker, Kubernetes, Jenkins, CI/CD
+    Pipelines, Linux, AWS, GCP, Monitoring &'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Linux
+  category: Cloud & DevOps
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Cloud & DevOps: Azure DevOps, Docker, Kubernetes, Jenkins, CI/CD
+    Pipelines, Linux, AWS, GCP, Monitoring &'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: AWS
+  category: Cloud & DevOps
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Cloud & DevOps: Azure DevOps, Docker, Kubernetes, Jenkins, CI/CD
+    Pipelines, Linux, AWS, GCP, Monitoring &'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: GCP
+  category: Cloud & DevOps
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Cloud & DevOps: Azure DevOps, Docker, Kubernetes, Jenkins, CI/CD
+    Pipelines, Linux, AWS, GCP, Monitoring &'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Monitoring &
+  category: Cloud & DevOps
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Cloud & DevOps: Azure DevOps, Docker, Kubernetes, Jenkins, CI/CD
+    Pipelines, Linux, AWS, GCP, Monitoring &'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Observability
+  category: other
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: Observability
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Git
+  category: Tools & Frameworks
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Tools & Frameworks: Git, GitHub, Maven, OpenShift, Postman,
+    JIRA, YAML, XML, Artifactory, OpenTelemetry,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: GitHub
+  category: Tools & Frameworks
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Tools & Frameworks: Git, GitHub, Maven, OpenShift, Postman,
+    JIRA, YAML, XML, Artifactory, OpenTelemetry,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Maven
+  category: Tools & Frameworks
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Tools & Frameworks: Git, GitHub, Maven, OpenShift, Postman,
+    JIRA, YAML, XML, Artifactory, OpenTelemetry,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: OpenShift
+  category: Tools & Frameworks
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Tools & Frameworks: Git, GitHub, Maven, OpenShift, Postman,
+    JIRA, YAML, XML, Artifactory, OpenTelemetry,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Postman
+  category: Tools & Frameworks
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Tools & Frameworks: Git, GitHub, Maven, OpenShift, Postman,
+    JIRA, YAML, XML, Artifactory, OpenTelemetry,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: JIRA
+  category: Tools & Frameworks
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Tools & Frameworks: Git, GitHub, Maven, OpenShift, Postman,
+    JIRA, YAML, XML, Artifactory, OpenTelemetry,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: YAML
+  category: Tools & Frameworks
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Tools & Frameworks: Git, GitHub, Maven, OpenShift, Postman,
+    JIRA, YAML, XML, Artifactory, OpenTelemetry,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: XML
+  category: Tools & Frameworks
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Tools & Frameworks: Git, GitHub, Maven, OpenShift, Postman,
+    JIRA, YAML, XML, Artifactory, OpenTelemetry,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Artifactory
+  category: Tools & Frameworks
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Tools & Frameworks: Git, GitHub, Maven, OpenShift, Postman,
+    JIRA, YAML, XML, Artifactory, OpenTelemetry,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: OpenTelemetry
+  category: Tools & Frameworks
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Tools & Frameworks: Git, GitHub, Maven, OpenShift, Postman,
+    JIRA, YAML, XML, Artifactory, OpenTelemetry,'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: SigNoz
+  category: other
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: SigNoz
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: JUnit
+  category: Testing
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Testing: JUnit, Selenium, Jasmine, Test-Driven Development (TDD)'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Selenium
+  category: Testing
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Testing: JUnit, Selenium, Jasmine, Test-Driven Development (TDD)'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Jasmine
+  category: Testing
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Testing: JUnit, Selenium, Jasmine, Test-Driven Development (TDD)'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Test-Driven Development (TDD)
+  category: Testing
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Testing: JUnit, Selenium, Jasmine, Test-Driven Development (TDD)'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Cloud-Native Architecture
+  category: Architecture
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Architecture: Cloud-Native Architecture, Microservices, Distributed
+    Systems, Service-Oriented Architecture'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Service-Oriented Architecture
+  category: Architecture
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Architecture: Cloud-Native Architecture, Microservices, Distributed
+    Systems, Service-Oriented Architecture'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: (SOA)
+  category: other
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: (SOA)
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: OAuth2.0
+  category: Security
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Security: OAuth2.0, SAML2.0'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: SAML2.0
+  category: Security
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Security: OAuth2.0, SAML2.0'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: Agile (Scrum)
+  category: Methodologies
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Methodologies: Agile (Scrum), SDLC'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
+- name: SDLC
+  category: Methodologies
+  source_file: JXTG RES.pdf
+  source_section: skills
+  supporting_text: '• Methodologies: Agile (Scrum), SDLC'
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  contexts: []
 notes:
-  - "Empty until resume import. Never add skills from job descriptions alone."
+- Imported via import-resume. Complete review-profile before applications.

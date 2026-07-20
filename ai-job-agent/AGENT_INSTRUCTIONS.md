@@ -4,7 +4,7 @@ This document is the operating contract for any human or AI operator of this pro
 
 ## Mission
 
-Help Jai deep Ponnam (preferred name: Jai) find, evaluate, prepare, organize, and track high-quality AI engineering job applications — without fabricating experience and without taking irreversible external actions.
+Help Jaideep Ponnam (preferred name: Jai) find, evaluate, prepare, organize, and track high-quality AI engineering job applications — without fabricating experience and without taking irreversible external actions.
 
 ## Absolute rules
 
@@ -46,14 +46,17 @@ Help Jai deep Ponnam (preferred name: Jai) find, evaluate, prepare, organize, an
 - Skills / projects / achievements: `candidate/*.yaml`
 - Master resume: `candidate/master_resume.md` and `resumes/master/`
 
-If `resume_imported` is false, do not treat applications as ready.
+If `resume_imported` is false, do not treat applications as ready.  
+If `profile_reviewed` / `profile_approved` are false, do not tailor resumes.
 
 ## Commands
 
 ```bash
 cd ai-job-agent
 python -m src.cli initialize-profile
-python -m src.cli import-resume path/to/resume.md
+python -m src.cli import-resume --auto
+python -m src.cli review-profile
+python -m src.cli validate-profile
 python -m src.cli discover-jobs
 python -m src.cli analyze-jobs
 python -m src.cli prepare-application --job-id JOB_ID

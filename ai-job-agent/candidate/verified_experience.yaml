@@ -1,34 +1,494 @@
-# Verified experience knowledge base.
-# Every entry MUST cite a source file and supporting evidence.
-# Unsupported claims must never appear in applications.
-
-schema_version: "1.0"
-last_updated: null
-resume_imported: false
-source_files_scanned: []
-
-experiences: []
-# Example shape (do not invent real entries):
-# - id: exp_001
-#   employer: "Acme Corp"
-#   role: "Software Engineer"
-#   start_date: "2022-01"
-#   end_date: "2023-06"
-#   location: "Austin, TX"
-#   employment_type: "Full-time"
-#   technologies: ["Python", "FastAPI"]
-#   responsibilities:
-#     - text: "Built REST APIs for ..."
-#       confidence: high
-#       can_include_in_resume: true
-#       claim_type: verified_fact  # verified_fact | reasonable_reframing | unsupported
-#       supporting_text: "exact quote from resume"
-#       source_file: "resumes/master/Jaideep_Ponnam_Resume.md"
-#   measurable_results: []
-#   industry_domain: null
-#   confidence: high
-#   can_include_in_resume: true
-
+schema_version: '1.1'
+last_updated: '2026-07-20'
+resume_imported: true
+source_files_scanned:
+- JXTG RES.pdf
+experiences:
+- id: exp_001
+  employer: Greenlight
+  role: Software Engineer (Java & Backend Systems)
+  start_date: Jul 2025
+  end_date: null
+  location: Atlanta, Georgia, USA
+  employment_type: Full-time
+  technologies:
+  - Java
+  - Spring Boot
+  - PostgreSQL
+  - Docker
+  - Azure
+  - JUnit
+  - REST
+  - SQL
+  responsibilities:
+  - text: Developed backend services using Java and Spring Boot to support scalable
+      microservice-based applications used across enterprise platforms.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Developed backend services using Java and Spring Boot to support
+      scalable microservice-based applications used across enterprise platforms.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Designed and implemented scalable RESTful APIs within distributed microservice
+      environments for enterprise platform communication.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Designed and implemented scalable RESTful APIs within distributed
+      microservice environments for enterprise platform communication.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Integrated backend services with PostgreSQL databases and improved query
+      performance through optimized data models.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Integrated backend services with PostgreSQL databases and improved
+      query performance through optimized data models.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Built and maintained CI/CD pipelines using Docker and Azure DevOps to automate
+      application testing and deployments.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Built and maintained CI/CD pipelines using Docker and Azure DevOps
+      to automate application testing and deployments.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Wrote unit tests with JUnit and participated in code reviews to maintain
+      high code quality and reliability.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Wrote unit tests with JUnit and participated in code reviews
+      to maintain high code quality and reliability.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Worked closely with QA engineers, DevOps teams, and product managers in
+      Agile sprints to deliver new features and system improvements.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Worked closely with QA engineers, DevOps teams, and product managers
+      in Agile sprints to deliver new features and system improvements.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Contributed to system design discussions, sprint planning, and technical
+      documentation to support development and team collaboration.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Contributed to system design discussions, sprint planning, and
+      technical documentation to support development and team collaboration.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  measurable_results: []
+  industry_domain: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Greenlight | Software Engineer (Java & Backend Systems) | Jul 2025
+    – None
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: true
+  confirmation_reason: Only a single date was found on the resume ('Jul 2025'). Confirm
+    whether this role is ongoing and the correct end date.
+- id: exp_002
+  employer: University of Memphis
+  role: Research Assistant (Java Developer)
+  start_date: Aug 2024
+  end_date: May 2025
+  location: Memphis, Tennessee, USA
+  employment_type: Part-time
+  technologies:
+  - Java
+  - Spring Boot
+  - JUnit
+  responsibilities:
+  - text: Developed backend components and internal tools using Java and Spring Boot
+      to support research projects and academic data workflows.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Developed backend components and internal tools using Java and
+      Spring Boot to support research projects and academic data workflows.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Assisted in designing data models and reporting scripts to help organize
+      and analyze research datasets, improving data accessibility and supporting more
+      efficient analysis for research projects.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Assisted in designing data models and reporting scripts to help
+      organize and analyze research datasets, improving data accessibility and supporting
+      more efficient analysis for research projects.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Implemented unit tests using JUnit and Jasmine to validate application functionality
+      and improve code reliability.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Implemented unit tests using JUnit and Jasmine to validate application
+      functionality and improve code reliability.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Explored AI-based approaches to automate parts of data processing and research
+      analysis tasks.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Explored AI-based approaches to automate parts of data processing
+      and research analysis tasks.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Maintained technical documentation and assisted in preparing system guidelines
+      for research team members.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Maintained technical documentation and assisted in preparing
+      system guidelines for research team members.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Collaborated with faculty and graduate students to support development and
+      improvement of research software tools.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Collaborated with faculty and graduate students to support development
+      and improvement of research software tools.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  measurable_results: []
+  industry_domain: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: University of Memphis | Research Assistant (Java Developer) | Aug
+    2024 – May 2025
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
+- id: exp_003
+  employer: DXC Technology
+  role: Software Engineer
+  start_date: Nov 2021
+  end_date: Dec 2023
+  location: Karnataka, India
+  employment_type: Full-time
+  technologies:
+  - Java
+  - Spring Boot
+  - Jenkins
+  - JUnit
+  - Git
+  - REST
+  - SQL
+  responsibilities:
+  - text: Developed and maintained scalable backend services using Java and Spring
+      Boot within microservice-based enterprise applications.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Developed and maintained scalable backend services using Java
+      and Spring Boot within microservice-based enterprise applications.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Developed and used RESTful APIs supported by JSON and HTTP protocols for
+      backend and internal web platform integration.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Developed and used RESTful APIs supported by JSON and HTTP protocols
+      for backend and internal web platform integration.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Constructed and improved SQL queries and schemas of the relational database,
+      for improved data retrieval and sustained high-volume transactions.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Constructed and improved SQL queries and schemas of the relational
+      database, for improved data retrieval and sustained high-volume transactions.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Tested and resolved issues within production and staging environments for
+      improved systems and reduced application downtime.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Tested and resolved issues within production and staging environments
+      for improved systems and reduced application downtime.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Created unit and integration tests with JUnit, resulting in higher code
+      reliability and reduced defects in development cycles.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Created unit and integration tests with JUnit, resulting in higher
+      code reliability and reduced defects in development cycles.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Partnered with the DevOps team in support of CI/CD integration for automated
+      builds and deployments through Git, Jenkins, and containerized environments.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Partnered with the DevOps team in support of CI/CD integration
+      for automated builds and deployments through Git, Jenkins, and containerized
+      environments.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Extension of Agile development practices in sprint planning, backlog grooming,
+      and daily sit to facilitate incremental backend feature delivery.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Extension of Agile development practices in sprint planning,
+      backlog grooming, and daily sit to facilitate incremental backend feature delivery.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  measurable_results: []
+  industry_domain: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: DXC Technology | Software Engineer | Nov 2021 – Dec 2023
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
+- id: exp_004
+  employer: Indian Space Research Organisation (ISRO)
+  role: Software Development Intern
+  start_date: Mar 2021
+  end_date: Jun 2022
+  location: Hyderabad, India
+  employment_type: Internship
+  technologies:
+  - Java
+  - Python
+  - Git
+  - REST
+  - SQL
+  - Go
+  responsibilities:
+  - text: Created backend modules in Java to develop and implement backend processing
+      and analytics modules for structured research datasets in accordance with the
+      client–server architecture.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Created backend modules in Java to develop and implement backend
+      processing and analytics modules for structured research datasets in accordance
+      with the client–server architecture.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Built and tested RESTful APIs based on the JSON and HTTP standard for the
+      research applications.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Built and tested RESTful APIs based on the JSON and HTTP standard
+      for the research applications.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Designed and optimized the SQL queries for the experimental datasets to
+      facilitate backend data retrieval and to enhance the data processing performance.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Designed and optimized the SQL queries for the experimental datasets
+      to facilitate backend data retrieval and to enhance the data processing performance.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Streamlined research data processing and workflows through automation by
+      employing Java and Python, thus decreasing the manual effort required by the
+      teams.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Streamlined research data processing and workflows through automation
+      by employing Java and Python, thus decreasing the manual effort required by
+      the teams.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Used Git version control and collaborated with other engineers to debug,
+      test, and maintain the backend tools in a Linux development environment.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Used Git version control and collaborated with other engineers
+      to debug, test, and maintain the backend tools in a Linux development environment.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  - text: Part of the team that wrote and contributed to the technical documentation
+      and established the guidelines that govern Back End development and API.
+    metric: null
+    source_file: JXTG RES.pdf
+    source_section: experience
+    supporting_text: Part of the team that wrote and contributed to the technical
+      documentation and established the guidelines that govern Back End development
+      and API.
+    confidence: medium
+    verification_status: pending_review
+    can_include_in_resume: true
+    is_private: false
+    claim_type: verified_fact
+    requires_user_confirmation: false
+    confirmation_reason: null
+  measurable_results: []
+  industry_domain: null
+  source_file: JXTG RES.pdf
+  source_section: experience
+  supporting_text: Indian Space Research Organisation (ISRO) | Software Development
+    Intern | Mar 2021 – Jun 2022
+  confidence: high
+  verification_status: pending_review
+  can_include_in_resume: true
+  is_private: false
+  claim_type: verified_fact
+  requires_user_confirmation: false
+  confirmation_reason: null
 notes:
-  - "Workspace contained no resume at initialization (Nova Market repo only)."
-  - "Run import-resume after providing a resume file under resumes/master/."
+- 'Greenlight: Only a single date was found on the resume (''Jul 2025''). Confirm
+  whether this role is ongoing and the correct end date.'
+- Run review-profile before tailored resume generation
